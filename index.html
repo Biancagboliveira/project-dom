@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="icon" href="img/icon.jpg">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D O M</title>
+</head>
+
+<body>
+
+    <h1>DOM - Document Object Model</h1>
+
+    <br><br>
+
+    <p>A sigla DOM significa <strong>Document Object Model</strong>, que em portugues significa Modelo de Documento por
+    objetos. Trata-se de uma interface de programação que os navegadores utilizam para representar páginas na web.</p>
+
+    <br>
+
+    <p>Bianca Gomes Barbosa de Oliveira</p>
+
+    <div id="mensagem" onclick="mudar()" onmouseenter="entrar()" onmouseout="sair()"> Um dia você aprende que as verdadeiras amizades continuam a crescer, mesmo a longas distâncias. E o que importa não é o que você tem na vida, mas quem tem na vida. Aprende que não temos que mudar de amigos, se compreendermos que os amigos mudam.
+    </div>
+
+    <br>
+
+    <script>
+       //window.document.write ('olá mundo');
+       //window.document.write(window.document.charset);
+       //window.document.write(window.navigator.appname);
+       //window.write(window.document.ur);
+
+       var paragrafo = window.document.getElementsByTagName('p')[0]
+
+       paragrafo.style.color = 'red';
+
+       var corpo = window.document.body;
+       corpo.style.background = 'pink';
+       corpo.style.color = 'brown';
+       corpo.style.fontFamily = 'Arial';
+       corpo.style.fontSize = '16px';
+
+       var msg = window.document.getElementById('mensagem');
+       msg.style.background = 'white';
+
+       //Eventos em JS
+
+       function mudar() {
+        msg.style.background = 'pink';
+
+       }
+
+       function entrar () {
+        msg.style.background = 'purple';
+
+       }
+
+
+       function sair () {
+        msg.style.background = 'cyan';
+       }
+
+       msg.addEventListener('click', mudar);
+
+       window.document.write(paragrafo.innerHTML);
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+</body>
+
+<footer>
+    <p class="rodapé">Direitos reservados á Bianca Gomes Barbosa
+        de Oliveira 2022 ©</p>
+</footer>
+
+</html>
